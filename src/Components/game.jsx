@@ -28,6 +28,7 @@ class Game extends React.Component {
       numCorrect: numCorrect,
     };
   }
+  
   makeNewValuesArray = () => {
     var tempArray = [];
     var tempSum = 0;
@@ -43,15 +44,19 @@ class Game extends React.Component {
   render() {
     return(
       <div className="game">
-        <h2>Mental Math</h2>
+        <h2>Mental Maths</h2>
         <div className="equation">
-          <p className="text">{`${this.state.valuesArray[0]} + ${this.state.valuesArray[1]} + ${this.state.valuesArray[2]} = ${this.state.valuesArray[3]}`}</p>
+          <p className="text">{`${this.state.valuesArray[0]} + 
+            ${this.state.valuesArray[1]} + 
+            ${this.state.valuesArray[2]} = 
+            ${this.state.valuesArray[3]}`}
+          </p>
         </div>
-        <button>True</button>
-        <button>False</button>
-        <p className="text">
-          Your Score: {this.state.numCorrect}/{this.state.numQuestions}
-        </p>
+        <div className="test" style={{backgroundColor:'#aa6666', padding:'0.5em'}}>
+          <p className="text">Correct answer: 
+            {this.state.valuesArray[0] + this.state.valuesArray[1] + this.state.valuesArray[2]}
+          </p>
+        </div>
       </div>
     )
   }

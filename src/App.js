@@ -3,6 +3,7 @@ import './Css/App.css';
 
 import Header from './Components/header.jsx'
 import Game from './Components/game.jsx'
+import Scoring from './Components/scoring.jsx'
 /*
 const value1 = Math.floor(Math.random() * 100);
 const value2 = Math.floor(Math.random() * 100);
@@ -18,6 +19,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Game />
+        <Scoring />
       </div>
     );
   }
